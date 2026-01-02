@@ -13,7 +13,11 @@
 body {
     background-color: var(--background);
     margin: 0;
-    padding: 1.5rem 1vw;
+    padding: 1.5rem 7rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .intertext {
@@ -39,10 +43,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.1rem solid #000;
+    border: 0.1rem solid var(--line-color);
     border-radius: 1rem;
     padding: 0.75rem 1.5rem;
-    max-width: 70vw;
+    width: calc(100% - 4rem);
+    max-width: calc(100% - 4rem);
     margin: 0 auto 1.5rem auto;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
     font-family: "Instrument Serif", serif;
@@ -60,7 +65,7 @@ body {
 .curved-navbar .nav-item a {
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: "Instrument Serif", serif;
     font-style: normal;
 }
@@ -74,7 +79,7 @@ body {
 }
 
 .curved-navbar .logo {
-    font-size: 1.75rem;
+    font-size: 2rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -101,18 +106,23 @@ body {
 }
 
 .left {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .right {
-    margin-left: auto;
+    margin-left: 1rem;
 }
 
 /* Main Content Styles */
 .main-content {
-    max-width: 90%;
+    width: calc(100% - 4rem);
+    max-width: calc(100% - 4rem);
     margin: 0 auto;
     font-family: "Instrument Serif", serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
 }
 
 /* Header Section */
@@ -120,9 +130,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    margin-top: 0.5rem;
     margin-bottom: 2rem;
     align-items: center;
-    min-height: auto;
+    flex: 0 0 50%;
+    min-height: 0;
+    overflow: auto;
 }
 
 .header-left {
@@ -157,13 +170,13 @@ body {
 .quick-facts {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2rem;
 }
 
 .fact-item {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     padding: 0;
     padding-bottom: 1.25rem;
@@ -185,8 +198,8 @@ body {
     word-wrap: break-word;
     white-space: nowrap;
     flex-shrink: 0;
-    width: auto;
-    min-width: auto;
+    width: 12rem;
+    min-width: 12rem;
     margin: 0;
     padding: 0;
 }
@@ -194,7 +207,7 @@ body {
 .fact-value {
     color: #000;
     font-size: 1.5rem;
-    font-family: "Instrument Serif", serif;
+    font-family: "Inter", sans-serif;
     word-wrap: break-word;
     overflow-wrap: break-word;
     flex: 1;
@@ -209,6 +222,9 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 2rem;
+    flex: 0 0 50%;
+    min-height: 0;
+    overflow: auto;
 }
 
 .experience-section h2 {
@@ -263,7 +279,8 @@ body {
 .section-divider {
     border: none;
     border-top: 1px solid var(--line-color);
-    margin: 2rem 0;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 /* Responsive adjustments */
