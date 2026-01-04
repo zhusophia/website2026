@@ -27,16 +27,16 @@
         
         <ul class="nav-items right">
             <li class="nav-item">
-                <a href="#" class="nav-icon"><i class="fa-regular fa-file-pdf"></i></a>
+                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="fa-regular fa-file-pdf"></i></a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="nav-icon"><i class="fa-regular fa-envelope"></i></a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/siyingsophiazhu/" target="_blank" class="nav-icon"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/zhusophia" target="_blank" class="nav-icon"><i class="fa-brands fa-github"></i></a>
             </li>
         </ul>
     </nav>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="fact-item">
                     <span class="fact-label">Based in</span>
-                    <span class="fact-value">Toronto, 11:09 PM EST.</span>
+                    <span class="fact-value" id="time-display">Toronto, <span id="current-time"></span></span>
                 </div>
                 <div class="fact-item">
                     <span class="fact-label">Obsessed with</span>
@@ -72,21 +72,21 @@
                 <h2>Recently, I've worked at:</h2>
                 <div class="experience-list">
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="Zynga" class="experience-logo">
+                        <img src="pictures/zyngalogo.png" alt="Zynga" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">Zynga</p>
                             <p class="experience-role">Product Manager Intern, Words with Friends</p>
                         </div>
                     </div>
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="Pepper" class="experience-logo">
+                        <img src="pictures/pepperlogo.jpg" alt="Pepper" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">Pepper</p>
                             <p class="experience-role">Product Manager Intern, AI</p>
                         </div>
                     </div>
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="AgencyAnalytics" class="experience-logo">
+                        <img src="pictures/aalogo.jpg" alt="AgencyAnalytics" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">AgencyAnalytics</p>
                             <p class="experience-role">Product Manager Intern, Core UX</p>
@@ -98,21 +98,21 @@
                 <h2>On the side, I've contributed to:</h2>
                 <div class="experience-list">
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="IBM" class="experience-logo">
+                        <img src="pictures/ibmlogo.png" alt="IBM" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">IBM</p>
                             <p class="experience-role">Pro Bono Consultant</p>
                         </div>
                     </div>
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="UW Blueprint" class="experience-logo">
+                        <img src="pictures/blueprintlogo.png" alt="UW Blueprint" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">UW Blueprint</p>
                             <p class="experience-role">Product Manager</p>
                         </div>
                     </div>
                     <div class="experience-item">
-                        <img src="wanderwomenlogo.png" alt="Pog Networks" class="experience-logo">
+                        <img src="pictures/poglogo.jpg" alt="Pog Networks" class="experience-logo">
                         <div class="experience-details">
                             <p class="experience-company">Pog Networks</p>
                             <p class="experience-role">Cofounder and CEO</p>
@@ -122,6 +122,27 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'America/Toronto',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+                timeZoneName: 'short'
+            };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            // Format: "11:09 PM EST" -> just the time part
+            const timeOnly = timeString.split(' ').slice(0, -1).join(' ');
+            const timeZone = timeString.split(' ').pop();
+            document.getElementById('current-time').textContent = timeOnly + ' ' + timeZone + '.';
+        }
+
+        // Update once when page loads
+        updateTime();
+    </script>
 
 </body>
 

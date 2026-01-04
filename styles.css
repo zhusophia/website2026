@@ -51,6 +51,7 @@ body {
     margin: 0 auto 1.5rem auto;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
     font-family: "Instrument Serif", serif;
+    flex-shrink: 0;
 }
 
 .curved-navbar .nav-items {
@@ -121,7 +122,10 @@ body {
     font-family: "Instrument Serif", serif;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1 1 0;
+    min-height: 0;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
@@ -130,12 +134,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
     align-items: center;
-    flex: 0 0 50%;
+    flex: 0 1 auto;
     min-height: 0;
-    overflow: auto;
 }
 
 .header-left {
@@ -170,7 +173,7 @@ body {
 .quick-facts {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .fact-item {
@@ -179,7 +182,7 @@ body {
     align-items: center;
     gap: 1.5rem;
     padding: 0;
-    padding-bottom: 1.25rem;
+    padding-bottom: 2rem;
     margin: 0;
     border-bottom: 1px solid var(--line-color);
 }
@@ -221,36 +224,46 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    margin-top: 2rem;
-    flex: 0 0 50%;
+    margin-top: 0;
+    flex: 1 1 0;
     min-height: 0;
-    overflow: auto;
+    align-items: start;
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .experience-section h2 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: 400;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.25rem 0;
     font-family: "Instrument Serif", serif;
+    flex-shrink: 0;
 }
 
 .experience-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex: 1 1 0;
+    min-height: 0;
 }
 
 .experience-item {
     display: flex;
     gap: 1.25rem;
-    align-items: start;
+    align-items: center;
 }
 
 .experience-logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: contain;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
     flex-shrink: 0;
+    border-radius: 20px;
 }
 
 .experience-details {
@@ -260,18 +273,19 @@ body {
 }
 
 .experience-company {
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-size: 1.35rem;
+    font-weight: 500;
     margin: 0;
-    font-family: "Instrument Serif", serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.3;
 }
 
 .experience-role {
-    font-size: 0.9375rem;
+    font-size: 1.125rem;
     color: #666;
     margin: 0;
-    font-family: "Instrument Serif", serif;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
     line-height: 1.3;
 }
 
@@ -279,14 +293,216 @@ body {
 .section-divider {
     border: none;
     border-top: 1px solid var(--line-color);
-    margin: 0;
+    margin: 2rem 0 2rem 0;
     flex-shrink: 0;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1400px) {
+    :root {
+        font-size: 13px;
+    }
+    
+    body {
+        padding: 1rem 4rem;
+    }
+    
+    .curved-navbar {
+        border-radius: 7px;
+    }
+    
+    .header-left h1 {
+        font-size: 4.5rem;
+    }
+    
+    .header-left p {
+        font-size: 1.75rem;
+    }
+    
+    .fact-label {
+        font-size: 1.75rem;
+        width: 9rem;
+        min-width: 9rem;
+    }
+    
+    .fact-value {
+        font-size: 1.15rem;
+    }
+    
+    .experience-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .experience-logo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 7px;
+    }
+    
+    .experience-company {
+        font-size: 1.1rem;
+    }
+    
+    .experience-role {
+        font-size: 0.95rem;
+    }
+    
+    .header-section {
+        gap: 2rem;
+    }
+    
+    .experience-sections {
+        gap: 2rem;
+    }
+    
+    .quick-facts {
+        gap: 2rem;
+    }
+    
+    .fact-item {
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .experience-list {
+        gap: 0.8rem;
+    }
+    
+    .section-divider {
+        margin: 1.75rem 0 1.75rem 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 12px;
+    }
+    
+    body {
+        padding: 0.9rem 3rem;
+    }
+    
+    .curved-navbar {
+        border-radius: 7px;
+    }
+    
+    .header-left h1 {
+        font-size: 3.75rem;
+    }
+    
+    .header-left p {
+        font-size: 1.5rem;
+    }
+    
+    .fact-label {
+        font-size: 1.5rem;
+        width: 8rem;
+        min-width: 8rem;
+    }
+    
+    .fact-value {
+        font-size: 1rem;
+    }
+    
+    .experience-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .experience-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 7px;
+    }
+    
+    .experience-company {
+        font-size: 0.95rem;
+    }
+    
+    .experience-role {
+        font-size: 0.85rem;
+    }
+    
+    .header-section {
+        gap: 1.75rem;
+    }
+    
+    .experience-sections {
+        gap: 1.75rem;
+    }
+    
+    .quick-facts {
+        gap: 1.75rem;
+    }
+    
+    .fact-item {
+        gap: 0.9rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .experience-list {
+        gap: 0.7rem;
+    }
+    
+    .section-divider {
+        margin: 1.5rem 0 1.75rem 0;
+    }
+}
+
 @media (max-width: 768px) {
     .header-section,
     .experience-sections {
         grid-template-columns: 1fr;
+    }
+    
+    :root {
+        font-size: 11px;
+    }
+    
+    body {
+        padding: 0.75rem 1.5rem 1rem 1.5rem;
+    }
+    
+    .curved-navbar {
+        border-radius: 7px;
+    }
+    
+    .header-left h1 {
+        font-size: 3rem;
+    }
+    
+    .header-left p {
+        font-size: 1.3rem;
+    }
+    
+    .fact-label {
+        font-size: 1.3rem;
+        width: 7rem;
+        min-width: 7rem;
+    }
+    
+    .fact-value {
+        font-size: 0.9rem;
+    }
+    
+    .experience-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .experience-logo {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 7px;
+    }
+    
+    .experience-company {
+        font-size: 0.9rem;
+    }
+    
+    .experience-role {
+        font-size: 0.75rem;
+    }
+    
+    .section-divider {
+        margin: 1.5rem 0 1.75rem 0;
     }
 }
