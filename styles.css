@@ -9,6 +9,15 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     background-color: var(--background);
@@ -16,8 +25,7 @@ body {
     padding: 1.5rem 7rem;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .intertext {
@@ -126,7 +134,6 @@ body {
     min-height: 0;
     padding-top: 1.5rem;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* Header Section */
@@ -293,8 +300,162 @@ body {
 .section-divider {
     border: none;
     border-top: 1px solid var(--line-color);
-    margin: 2rem 0 2rem 0;
+    margin: 3rem 0 3rem 0;
     flex-shrink: 0;
+}
+
+/* About Page Styles */
+.about-header-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.about-header-left h1 {
+    font-size: 7rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    font-family: "Instrument Serif", serif;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+.about-header-left p {
+    font-size: 2.3rem;
+    margin: 0;
+    line-height: 1.4;
+    font-family: "Instrument Serif", serif;
+    word-wrap: break-word;
+}
+
+.about-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section-title {
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    font-family: "Instrument Serif", serif;
+    color: var(--highlight);
+    font-style: italic;
+}
+
+.about-section-title-regular {
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    font-family: "Instrument Serif", serif;
+    color: #000;
+    font-style: normal;
+}
+
+.about-quote {
+    margin: 0 0 1.5rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid #000;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    color: #333;
+}
+
+.about-quote footer {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #666;
+}
+
+.about-body {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+.about-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+.about-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+.about-footer-divider {
+    border: none;
+    border-top: 1px solid var(--line-color);
+    margin: 0 0 2rem 0;
+}
+
+.about-footer-text {
+    font-size: 2.3rem;
+    margin: 0 0 1.5rem 0;
+    font-family: "Instrument Serif", serif;
+    line-height: 1.4;
+}
+
+.about-footer-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+    font-family: "Instrument Serif", serif;
+    transition: font-style 0.2s;
+}
+
+.about-footer-link:hover {
+    font-style: italic;
+}
+
+.about-footer-link i {
+    font-size: 1.25rem;
 }
 
 /* Responsive adjustments */
