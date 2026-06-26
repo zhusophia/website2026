@@ -87,11 +87,11 @@ body {
 }
 
 .curved-navbar .nav-item a.nav-label-ghost {
-    color: var(--background);
+    color: #F4F2F2;
 }
 
 .curved-navbar .nav-item a.nav-label-ghost:hover {
-    color: var(--background);
+    color: #F4F2F2;
 }
 
 .curved-navbar .nav-item.active .nav-label {
@@ -185,6 +185,7 @@ body {
 .highlight {
     color: var(--highlight);
     font-style: italic;
+    text-decoration: none;
 }
 
 /* Quick Facts Section */
@@ -709,13 +710,41 @@ a.footnote-item-link {
 }
 
 /* More Page */
+@keyframes introFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.intro-part {
+    opacity: 0;
+    animation: introFadeIn 0.8s ease forwards;
+}
+
+.intro-part-1 { animation-delay: 0.1s; }
+.intro-part-2 { animation-delay: 2.3s; }
+.intro-part-3 { animation-delay: 4.4s; }
+.intro-part-4 { animation-delay: 6.5s; }
+
 .more-intro-quote {
     margin-bottom: 1.5rem;
+    border-left: none !important;
+    position: relative;
+}
+
+.more-intro-quote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #000;
 }
 
 .more-quote-link {
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    text-decoration: none;
+    font-family: "Instrument Serif", serif;
+    font-size: 1.5rem;
 }
 
 .more-body {
@@ -729,6 +758,18 @@ a.footnote-item-link {
 .more-underline {
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+.more-step {
+    display: none;
+}
+
+.more-trigger {
+    cursor: pointer;
+}
+
+.more-trigger:hover {
+    opacity: 0.6;
 }
 
 .more-section-title {
@@ -761,18 +802,19 @@ a.footnote-item-link {
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     margin-bottom: 1rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .photo-locations {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.35rem;
+    min-height: 340px;
 }
 
 .photo-location {
     font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #aaa;
     cursor: pointer;
     padding: 0.15rem 0 0.15rem 0.75rem;
@@ -789,15 +831,46 @@ a.footnote-item-link {
     color: #666;
 }
 
-.photo-display {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.5rem;
+.photo-strip-wrapper {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+    height: 100%;
 }
 
-.photo-placeholder {
-    border-radius: 6px;
-    aspect-ratio: 2/3;
+.photo-strip-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-strip-center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+}
+
+.photo-strip {
+    display: flex;
+    gap: 0.75rem;
+    position: relative;
+    width: max-content;
+}
+
+.photo-item {
+    height: 340px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-item img {
+    height: 100%;
+    width: auto;
+    display: block;
+    pointer-events: none;
+    user-select: none;
 }
 
 /* Music / On Repeat */
@@ -820,6 +893,12 @@ a.footnote-item-link {
     line-height: 1.5;
     color: #333;
     margin: 0;
+}
+
+.music-grid-dedication em {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 1.3rem;
 }
 
 .spotify-placeholder {
@@ -1031,7 +1110,7 @@ a.footnote-item-link {
     margin: 0 0 0.75rem 0;
     padding-left: 2rem;
     border-left: 3px solid #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     font-family: "Inter", sans-serif;
     font-style: italic;
@@ -1046,7 +1125,7 @@ a.footnote-item-link {
 }
 
 .about-body {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin: 0 0 0.5rem 0;
     font-family: "Inter", sans-serif;
@@ -1057,7 +1136,7 @@ a.footnote-item-link {
     list-style: none;
     padding: 0;
     margin: 0.4rem 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.6;
     font-family: "Inter", sans-serif;
     color: #000;

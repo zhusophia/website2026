@@ -49,13 +49,17 @@
 
         <!-- Intro quote -->
         <blockquote class="about-quote more-intro-quote">
-            "Here is the plain truth, as least as it has been shown to me: <a href="https://www.johngreenbooks.com/the-anthropocene-reviewed" target="_blank" class="highlight more-quote-link">We are never far from wonders.</a>"
-            <footer>— John Green, The Anthropocene Reviewed: Essays on a Human-Centered Planet</footer>
+            <span class="intro-part intro-part-1">"Here is the plain truth, as least as it has been shown to me: </span><span class="highlight more-quote-link intro-part intro-part-2">We are never far from wonders.</span><span class="intro-part intro-part-2">"</span>
+            <footer class="intro-part intro-part-3">— John Green, <i>The Anthropocene Reviewed: Essays on a Human-Centered Planet</i></footer>
         </blockquote>
 
-        <p class="more-body">Thank you for <span class="more-underline">taking the time</span> to find this page.</p>
-        <p class="more-body">Truthfully, I love building silly things that forces you to <span class="more-underline">be curious</span>. I like interactive media that encourages you to think. Unfortunately, it's not very recruiter-friendly, so, it gets shoved into a backroom-esque page.</p>
-        <p class="more-body">But, I <span class="more-underline">doubt</span> a recruiter will get onto this page, I can do whatever!</p>
+        <p class="more-body intro-part intro-part-4">Thank you for <span class="more-underline more-trigger" id="trigger-1">taking the time</span> to find this page.</p>
+
+        <p class="more-body more-step" id="more-step-2">Truthfully, I love building silly things that forces you to <span class="more-underline more-trigger" id="trigger-2">be curious</span>. I like interactive media that encourages you to think. Unfortunately, it's not very recruiter-friendly, so, it's hidden away :')</p>
+
+        <p class="more-body more-step" id="more-step-3">But, I <span class="more-underline more-trigger" id="trigger-3">doubt</span> most people will discover this page. So, I can do whatever!</p>
+
+        <div class="more-step" id="more-full-reveal">
         <p class="more-body">So, here's <em>even more</em> about me! Enjoy :)</p>
 
         <!-- Side Quests -->
@@ -76,23 +80,24 @@
         <h2 class="more-section-title">Selected Photos:</h2>
         <div class="photo-gallery">
             <div class="photo-locations">
-                <div class="photo-location active">E7, Waterloo (2025)</div>
-                <div class="photo-location">Chinatown, San Francisco (2026)</div>
-                <div class="photo-location">Asakusa, Tokyo (2025)</div>
-                <div class="photo-location">Design District, San Francisco (2026)</div>
-                <div class="photo-location">Figueroa St, Los Angeles (2026)</div>
-                <div class="photo-location">Victoria Peak, Hong Kong (2025)</div>
-                <div class="photo-location">Chimney Rock, Point Reyes (2026)</div>
-                <div class="photo-location">Twin Peaks, San Francisco (2026)</div>
-                <div class="photo-location">Hai Di Lao, Guangzhou (2025)</div>
-                <div class="photo-location">UofT, Toronto (2024)</div>
-                <div class="photo-location">Yonge &amp; Dundas, Toronto (2023)</div>
-                <div class="photo-location">Chinatown, San Francisco (2026)</div>
+                <div class="photo-location active" data-index="0">E7, Waterloo (2025)</div>
+                <div class="photo-location" data-index="1">Chinatown, San Francisco (2026)</div>
+                <div class="photo-location" data-index="2">Asakusa, Tokyo (2025)</div>
+                <div class="photo-location" data-index="3">Figueroa St, Los Angeles (2026)</div>
+                <div class="photo-location" data-index="4">Victoria Peak, Hong Kong (2025)</div>
+                <div class="photo-location" data-index="5">Chimney Rock, Point Reyes (2026)</div>
+                <div class="photo-location" data-index="6">Muir Beach, Muir Woods (2026)</div>
+                <div class="photo-location" data-index="7">Twin Peaks, San Francisco (2026)</div>
+                <div class="photo-location" data-index="8">Hai Di Lao, Guangzhou (2025)</div>
+                <div class="photo-location" data-index="9">St. Jacobs, Waterloo (2025)</div>
+                <div class="photo-location" data-index="10">UofT, Toronto (2024)</div>
+                <div class="photo-location" data-index="11">Yonge &amp; Dundas, Toronto (2023)</div>
+                <div class="photo-location" data-index="12">Chinatown, San Francisco (2026)</div>
             </div>
-            <div class="photo-display">
-                <div class="photo-placeholder" style="background: #b8a898;"></div>
-                <div class="photo-placeholder" style="background: #3a4a5a;"></div>
-                <div class="photo-placeholder" style="background: #6a7a8a;"></div>
+            <div class="photo-strip-wrapper">
+                <div class="photo-strip-center">
+                    <div class="photo-strip" id="photo-strip"></div>
+                </div>
             </div>
         </div>
 
@@ -100,34 +105,17 @@
         <h2 class="more-section-title">On Repeat:</h2>
         <div class="music-grid">
             <div class="music-grid-item">
-                <div class="spotify-placeholder spotify-grid-card">
-                    <div class="spotify-album-art"></div>
-                    <div class="spotify-text">
-                        <div class="spotify-song">1-800-hot-n-fun</div>
-                        <div class="spotify-artist">LE SSERAFIM</div>
-                    </div>
-                </div>
-                <p class="music-grid-dedication"><em>Dedicated to:</em><br>car jam and Current, where I stole this song of off one of these playlists.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4OhTm6quMnqHRbzntToUKG?utm_source=generator&si=2e0978aba8c94d78" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p class="music-grid-dedication"><em>Dedicated to:</em><br>carJam and Current, as I stole this song from them.</p>
+
             </div>
             <div class="music-grid-item">
-                <div class="spotify-placeholder spotify-grid-card">
-                    <div class="spotify-album-art"></div>
-                    <div class="spotify-text">
-                        <div class="spotify-song">1-800-hot-n-fun</div>
-                        <div class="spotify-artist">LE SSERAFIM</div>
-                    </div>
-                </div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3cjHBmP0CsTGNN44gf6cID?utm_source=generator&si=b16fff8e040e4824" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p class="music-grid-dedication"><em>Dedicated to:</em><br>2nd Floor MC Lab during Spring '25 where I listened to this song ~86 times in a row.</p>
             </div>
             <div class="music-grid-item">
-                <div class="spotify-placeholder spotify-grid-card">
-                    <div class="spotify-album-art"></div>
-                    <div class="spotify-text">
-                        <div class="spotify-song">1-800-hot-n-fun</div>
-                        <div class="spotify-artist">LE SSERAFIM</div>
-                    </div>
-                </div>
-                <p class="music-grid-dedication"><em>Dedicated to:</em><br>The ORV animatic that I found this song from. Ended up dropping ORV because it got boring. Great time to mention that my favorite manga of all time is Blue Period!</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/507ruNn83I35Qi0QIuiwwg?utm_source=generator&si=3fa330a199594d14" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p class="music-grid-dedication"><em>Dedicated to:</em><br>The ORV animatic that I found this song from. Ended up dropping ORV though.</p>
             </div>
         </div>
 
@@ -164,15 +152,171 @@
             <p class="more-footer-cta">Let's Chat. <span class="highlight">Reach out!</span></p>
         </footer>
 
+        </div><!-- end more-full-reveal -->
     </div>
 
     <script>
-        document.querySelectorAll('.photo-location').forEach(item => {
-            item.addEventListener('click', () => {
-                document.querySelectorAll('.photo-location').forEach(l => l.classList.remove('active'));
-                item.classList.add('active');
+        (function () {
+            const photoData = [
+                { src: 'pictures/e7.jpg' },
+                { src: 'pictures/chinatown1.JPG' },
+                { src: 'pictures/Asakusa_Fish.jpg' },
+                { src: 'pictures/Fig St.jpg' },
+                { src: 'pictures/victoriapeak.jpg' },
+                { src: 'pictures/chimney_rock.JPG' },
+                { src: 'pictures/PointReyes.jpg' },
+                { src: 'pictures/twinpeaks.JPG' },
+                { src: 'pictures/guangzhou.jpg' },
+                { src: 'pictures/waterloo.jpg' },
+                { src: 'pictures/UofT.jpg' },
+                { src: 'pictures/yonge.jpg' },
+                { src: 'pictures/chinatown2.jpg' },
+            ];
+
+            const N = photoData.length;
+            const strip = document.getElementById('photo-strip');
+            const wrapper = document.querySelector('.photo-strip-wrapper');
+            const locations = Array.from(document.querySelectorAll('.photo-location'));
+            const locationsContainer = document.querySelector('.photo-locations');
+
+            function buildStrip() {
+                strip.innerHTML = '';
+                for (let copy = 0; copy < 3; copy++) {
+                    photoData.forEach((photo) => {
+                        const item = document.createElement('div');
+                        item.className = 'photo-item';
+                        if (photo.src) {
+                            const img = document.createElement('img');
+                            img.src = photo.src;
+                            img.alt = '';
+                            img.draggable = false;
+                            item.appendChild(img);
+                        } else {
+                            item.style.background = photo.color || '#ccc';
+                            item.style.width = '380px';
+                        }
+                        strip.appendChild(item);
+                    });
+                }
+            }
+
+            buildStrip();
+
+            let setWidth = 0;
+            let items = [];
+
+            function init() {
+                items = Array.from(strip.querySelectorAll('.photo-item'));
+                setWidth = items[N].offsetLeft;
+                wrapper.scrollLeft = setWidth;
+            }
+
+            if (document.readyState === 'complete') init();
+            else window.addEventListener('load', init);
+
+            let scrollingTo = false;
+            let scrollingToTimer = null;
+
+            function setActive(index) {
+                locations.forEach((loc, i) => loc.classList.toggle('active', i === index));
+            }
+
+            // Infinite loop + active location sync
+            wrapper.addEventListener('scroll', () => {
+                if (!setWidth) return;
+                if (wrapper.scrollLeft < setWidth * 0.5) {
+                    wrapper.scrollLeft += setWidth;
+                } else if (wrapper.scrollLeft > setWidth * 2.5) {
+                    wrapper.scrollLeft -= setWidth;
+                }
+
+                if (scrollingTo) return;
+
+                const sl = wrapper.scrollLeft;
+                let activeIndex = 0;
+                for (let j = 0; j < items.length - 1; j++) {
+                    if (items[j].offsetLeft <= sl && items[j + 1].offsetLeft > sl) {
+                        activeIndex = j % N;
+                        break;
+                    }
+                }
+                setActive(activeIndex);
+            }, { passive: true });
+
+            wrapper.addEventListener('scrollend', () => { scrollingTo = false; }, { passive: true });
+
+            // Drag to scroll
+            let isDragging = false, startX = 0, startScrollLeft = 0;
+
+            wrapper.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                startScrollLeft = wrapper.scrollLeft;
+                wrapper.style.cursor = 'grabbing';
             });
-        });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging) { isDragging = false; wrapper.style.cursor = 'grab'; }
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                wrapper.scrollLeft = startScrollLeft - (e.clientX - startX);
+            });
+
+            // Touch
+            let touchStartX = 0, touchScrollLeft = 0;
+            wrapper.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchScrollLeft = wrapper.scrollLeft;
+            }, { passive: true });
+            wrapper.addEventListener('touchmove', (e) => {
+                wrapper.scrollLeft = touchScrollLeft - (e.touches[0].clientX - touchStartX);
+            }, { passive: true });
+
+            // Location click
+            locations.forEach((loc) => {
+                loc.addEventListener('click', () => {
+                    // Gallery may have been display:none at load time — re-init if needed
+                    if (!setWidth) {
+                        items = Array.from(strip.querySelectorAll('.photo-item'));
+                        setWidth = items[N].offsetLeft;
+                        wrapper.scrollLeft = setWidth;
+                    }
+                    scrollingTo = true;
+                    clearTimeout(scrollingToTimer);
+                    scrollingToTimer = setTimeout(() => { scrollingTo = false; }, 1500);
+                    const index = parseInt(loc.dataset.index);
+                    setActive(index);
+                    wrapper.scrollTo({ left: items[N + index].offsetLeft, behavior: 'smooth' });
+                });
+            });
+        })();
+    </script>
+
+    <script>
+        function revealStep(el) {
+            el.style.display = 'block';
+            el.style.opacity = '0';
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    el.style.transition = 'opacity 0.8s ease';
+                    el.style.opacity = '1';
+                });
+            });
+        }
+
+        document.getElementById('trigger-1').addEventListener('click', function () {
+            revealStep(document.getElementById('more-step-2'));
+        }, { once: true });
+
+        document.getElementById('trigger-2').addEventListener('click', function () {
+            revealStep(document.getElementById('more-step-3'));
+        }, { once: true });
+
+        document.getElementById('trigger-3').addEventListener('click', function () {
+            revealStep(document.getElementById('more-full-reveal'));
+        }, { once: true });
     </script>
 </body>
 </html>
