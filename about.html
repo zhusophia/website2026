@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZ</title>
+    <title>SZ — About</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-     <nav class="curved-navbar">
+    <nav class="curved-navbar">
         <ul class="nav-items left">
             <li class="nav-item">
-                <a href="index.html" class="nav-label">Home</a>
+                <a href="./" class="nav-label">Home</a>
             </li>
             <li class="nav-item">
                 <a href="work.html" class="nav-label">Work</a>
@@ -22,10 +22,13 @@
             <li class="nav-item active">
                 <a href="about.html" class="nav-label">About</a>
             </li>
+            <li class="nav-item">
+                <a href="more.html" class="nav-label nav-label-ghost">More</a>
+            </li>
         </ul>
-        
+
         <div class="logo">SZ</div>
-        
+
         <ul class="nav-items right">
             <li class="nav-item">
                 <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="fa-regular fa-file-pdf"></i></a>
@@ -43,33 +46,36 @@
     </nav>
 
     <div class="main-content">
-        <!-- Header Section -->
+
         <section class="about-header-section">
             <div class="about-header-left">
                 <h1>Still curious?</h1>
                 <p>Here's a <span class="highlight">little more</span> about me.</p>
             </div>
             <div class="about-header-right">
-                <img src="pictures/wanderwomenlogo.png" alt="Profile" class="about-profile-image">
+                <div class="about-header-right-inner">
+                    <img src="casestudy_mocks/headshot.jpg" alt="Profile" class="about-profile-image">
+                </div>
             </div>
         </section>
 
-        <!-- Problems Section -->
+        <hr class="about-divider">
+
         <section class="about-section">
             <h2 class="about-section-title">Problems:</h2>
             <blockquote class="about-quote">
                 "Happiness is a moment in time thing imo. I think of it more like what set of problems do I want to pick up, as that will dictate where you want to be / what you want to have"
                 <footer>— Yonge Li, over Slack</footer>
             </blockquote>
-            <p class="about-body">To me, tackling interesting problems means:</p>
+            <p class="about-body">To me, tackling interesting problems requires:</p>
             <ul class="about-list">
-                <li>Expanding my toolset of skills or knowledge</li>
-                <li>Positively impacting users and communities I care about</li>
-                <li>Working with kind and ambitious people.</li>
+                <li>Positively impacting users.</li>
+                <li>Ambiguous problem spaces where "best" isn't clear.</li>
+                <li>Expanding my knowledge and toolset of skills.</li>
+                <li>Working with ambitious and kind people who don't settle.</li>
             </ul>
         </section>
 
-        <!-- Motivations Section -->
         <section class="about-section">
             <h2 class="about-section-title">Motivations:</h2>
             <blockquote class="about-quote">
@@ -77,10 +83,9 @@
                 <footer>— Haruki Murakami, Kafka on the Shore</footer>
             </blockquote>
             <p class="about-body">I'm driven by curiosity and I'm constantly diving into rabbit holes.</p>
-            <p class="about-body">I tend to have a lot of questions, but a limited amount of time. These are some topics that I would love to have explained to me. I'll buy you a coffee in exchange for your time and knowledge :)</p>
+            <p class="about-body">This is a(n incomplete) list of topics that I would love to have explained to me. I'll buy you a coffee in exchange :)</p>
         </section>
 
-        <!-- Tech Section -->
         <section class="about-section">
             <h2 class="about-section-title-regular">Tech</h2>
             <ul class="about-list">
@@ -90,7 +95,6 @@
             </ul>
         </section>
 
-        <!-- Business Section -->
         <section class="about-section">
             <h2 class="about-section-title-regular">Business</h2>
             <ul class="about-list">
@@ -100,7 +104,6 @@
             </ul>
         </section>
 
-        <!-- Art Section -->
         <section class="about-section">
             <h2 class="about-section-title-regular">Art</h2>
             <ul class="about-list">
@@ -110,41 +113,25 @@
             </ul>
         </section>
 
-        <!-- Life Section -->
-        <section class="about-section">
-            <h2 class="about-section-title">Life:</h2>
-            <blockquote class="about-quote">
-                "Here is the plain truth, as least as it has been shown to me: We are never far from wonders."
-                <footer>— John Green, The Anthropocene Reviewed: Essays on a Human-Centered Planet</footer>
-            </blockquote>
-            <p class="about-body">I always have a few side-quests going on:</p>
-            <ul class="about-list">
-                <li>Finishing the NYT Mini Crossword in under 20 seconds.</li>
-                <li>Visit 25 countries before I turn 25 (I'm at 14/25).</li>
-                <li>Perfecting a medium-rare ribeye and rosé sauce.</li>
-            </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer class="about-footer">
-            <hr class="about-footer-divider">
-            <p class="about-footer-text">I'd love to chat. <span class="highlight">Reach out!</span></p>
-            <div class="about-footer-links">
-                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="about-footer-link">
+        <footer class="page-footer">
+            <p class="page-footer-cta">I'd love to chat. <span class="highlight">Reach out!</span></p>
+            <hr class="page-footer-divider">
+            <div class="page-footer-links">
+                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="page-footer-link">
                     <i class="fa-regular fa-file-pdf"></i>
                     <span>Resume</span>
                 </a>
-                <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="about-footer-link">
+                <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="page-footer-link">
                     <i class="fa-regular fa-envelope"></i>
                     <span>Email</span>
                 </a>
-                <a href="https://www.linkedin.com/in/siyingsophiazhu/" target="_blank" class="about-footer-link">
+                <a href="https://www.linkedin.com/in/siyingsophiazhu/" target="_blank" class="page-footer-link">
                     <i class="fa-brands fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
             </div>
         </footer>
+
     </div>
 </body>
 </html>
-

@@ -14,13 +14,16 @@
      <nav class="curved-navbar">
         <ul class="nav-items left">
             <li class="nav-item active">
-                <a href="index.html" class="nav-label">Home</a>
+                <a href="./" class="nav-label">Home</a>
             </li>
             <li class="nav-item">
                 <a href="work.html" class="nav-label">Work</a>
             </li>
             <li class="nav-item">
                 <a href="about.html" class="nav-label">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="more.html" class="nav-label nav-label-ghost">More</a>
             </li>
         </ul>
         
@@ -47,88 +50,45 @@
         <section class="header-section">
             <div class="header-left">
                 <h1>Hi, I'm Sophia!</h1>
-                <p>I'm a <span class="highlight">product manager</span> tackling <span class="highlight">interesting</span> problems.</p>
+                <p>I like solving <a href="about.html" class="highlight">interesting</a><a href="about.html" class="footnote-link"><sup class="footnote-ref">1</sup></a> problems.</p>
             </div>
             <div class="quick-facts">
                 <div class="fact-item">
-                    <span class="fact-label">Currently a</span>
-                    <span class="fact-value">Math/Business student at UWaterloo and Wilfrid Laurier University.</span>
+                    <span class="fact-label"><a href="work.html" class="fact-label-link">Currently</a><a href="work.html" class="footnote-link"><sup class="footnote-ref">2</sup></a></span>
+                    <span class="fact-value">building critical thinking skills via product management roles.</span>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-label">Studying</span>
+                    <span class="fact-value">Math and Business at UWaterloo and Wilfrid Laurier University.</span>
                 </div>
                 <div class="fact-item">
                     <span class="fact-label">Based in</span>
-                    <span class="fact-value" id="time-display">Toronto, <span id="current-time"></span></span>
+                    <span class="fact-value" id="time-display">San Francisco, <span id="current-time"></span></span>
                 </div>
                 <div class="fact-item">
-                    <span class="fact-label">Obsessed with</span>
-                    <span class="fact-value">the New York Times Mini Crossword Puzzle.</span>
+                    <span class="fact-label">Obsessed with<sup class="footnote-ref footnote-ref-no-ul">3</sup></span>
+                    <span class="fact-value">the NYT Mini Crossword Puzzle &amp; landscape photography.</span>
                 </div>
             </div>
         </section>
 
-        <hr class="section-divider">
-
-        <!-- Experience Sections -->
-        <section class="experience-sections">
-            <div class="experience-section">
-                <h2>Recently, I've worked at:</h2>
-                <div class="experience-list">
-                    <div class="experience-item">
-                        <img src="pictures/zyngalogo.png" alt="Zynga" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">Zynga</p>
-                            <p class="experience-role">Product Manager Intern, Words with Friends</p>
-                        </div>
-                    </div>
-                    <div class="experience-item">
-                        <img src="pictures/pepperlogo.jpg" alt="Pepper" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">Pepper</p>
-                            <p class="experience-role">Product Manager Intern, AI</p>
-                        </div>
-                    </div>
-                    <div class="experience-item">
-                        <img src="pictures/aalogo.jpg" alt="AgencyAnalytics" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">AgencyAnalytics</p>
-                            <p class="experience-role">Product Manager Intern, Core UX</p>
-                        </div>
-                    </div>
-                </div>
+        <footer class="footnotes-section">
+            <p class="footnotes-header">Footnotes</p>
+            <div class="footnotes-list">
+                <a href="about.html" class="footnote-item-link"><span class="footnote-item"><span class="footnote-num">1.</span> See <span class="footnote-item-name">About</span>.</span></a>
+                <span class="footnote-divider">/</span>
+                <a href="work.html" class="footnote-item-link"><span class="footnote-item"><span class="footnote-num">2.</span> See <span class="footnote-item-name">Work</span>.</span></a>
+                <span class="footnote-divider">/</span>
+                <span class="footnote-item"><span class="footnote-num">3.</span> Find <a href="more.html">More</a>.</span>
             </div>
-            <div class="experience-section">
-                <h2>On the side, I've contributed to:</h2>
-                <div class="experience-list">
-                    <div class="experience-item">
-                        <img src="pictures/ibmlogo.png" alt="IBM" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">IBM</p>
-                            <p class="experience-role">Pro Bono Consultant</p>
-                        </div>
-                    </div>
-                    <div class="experience-item">
-                        <img src="pictures/blueprintlogo.png" alt="UW Blueprint" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">UW Blueprint</p>
-                            <p class="experience-role">Product Manager</p>
-                        </div>
-                    </div>
-                    <div class="experience-item">
-                        <img src="pictures/poglogo.jpg" alt="Pog Networks" class="experience-logo">
-                        <div class="experience-details">
-                            <p class="experience-company">Pog Networks</p>
-                            <p class="experience-role">Cofounder and CEO</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </footer>
     </div>
 
     <script>
         function updateTime() {
             const now = new Date();
             const options = {
-                timeZone: 'America/Toronto',
+                timeZone: 'America/Los_Angeles',
                 hour: 'numeric',
                 minute: '2-digit',
                 hour12: true,
