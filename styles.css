@@ -87,11 +87,11 @@ body {
 }
 
 .curved-navbar .nav-item a.nav-label-ghost {
-    color: #F4F2F2;
+    color: #EEEEEE;
 }
 
 .curved-navbar .nav-item a.nav-label-ghost:hover {
-    color: #F4F2F2;
+    color: #EEEEEE;
 }
 
 .curved-navbar .nav-item.active .nav-label {
@@ -721,12 +721,12 @@ a.footnote-item-link {
 }
 
 .intro-part-1 { animation-delay: 0.1s; }
-.intro-part-2 { animation-delay: 2.3s; }
-.intro-part-3 { animation-delay: 4.4s; }
-.intro-part-4 { animation-delay: 6.5s; }
+.intro-part-2 { animation-delay: 1.8s; }
+.intro-part-3 { animation-delay: 3.5s; }
+.intro-part-4 { animation-delay: 5.5s; }
 
 .more-intro-quote {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     border-left: none !important;
     position: relative;
 }
@@ -801,6 +801,7 @@ a.footnote-item-link {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
     align-items: stretch;
 }
@@ -1012,8 +1013,13 @@ a.footnote-item-link {
 
 .quote-card footer {
     color: #666;
-    font-style: italic;
+    font-style: normal;
     font-size: 0.85rem;
+}
+
+.more-quote-attribution-link {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* More footer */
@@ -1042,7 +1048,7 @@ a.footnote-item-link {
 .about-header-left h1 {
     font-size: 7rem;
     font-weight: 400;
-    margin: 0 0 1rem 0;
+    margin: 0 0 -0.5rem 0;
     font-family: "Instrument Serif", serif;
     word-wrap: break-word;
     line-height: 1.2;
@@ -1054,6 +1060,13 @@ a.footnote-item-link {
     line-height: 1.4;
     font-family: "Instrument Serif", serif;
     word-wrap: break-word;
+}
+
+.about-last-updated {
+    font-size: 1rem !important;
+    font-family: "Inter", sans-serif !important;
+    color: #888;
+    margin-top: 0.2rem !important;
 }
 
 .about-header-right {
