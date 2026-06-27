@@ -751,7 +751,7 @@ a.footnote-item-link {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     line-height: 1.7;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.5rem 0;
     color: #000;
 }
 
@@ -1048,7 +1048,7 @@ a.footnote-item-link {
 .about-header-left h1 {
     font-size: 7rem;
     font-weight: 400;
-    margin: 0 0 -0.5rem 0;
+    margin: 0 0 0.5rem 0;
     font-family: "Instrument Serif", serif;
     word-wrap: break-word;
     line-height: 1.2;
@@ -1066,7 +1066,7 @@ a.footnote-item-link {
     font-size: 1rem !important;
     font-family: "Inter", sans-serif !important;
     color: #888;
-    margin-top: 0.2rem !important;
+    margin-top: 1.5rem !important;
 }
 
 .about-header-right {
