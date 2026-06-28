@@ -54,7 +54,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.1rem solid var(--line-color);
+    border: 0.1rem solid #c8c8c8;
     border-radius: 1rem;
     padding: 0.75rem 1.5rem;
     width: 100%;
@@ -104,6 +104,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-family: "Instrument Serif", serif;
+    text-decoration: none;
+    color: #000;
 }
 
 .curved-navbar .nav-icon {
@@ -115,6 +117,10 @@ body {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.curved-navbar .nav-icon .ti {
+    font-size: 1.55rem;
 }
 
 .curved-navbar .nav-icon svg {
@@ -342,7 +348,7 @@ body {
 }
 
 .work-exp-item + .work-exp-item {
-    border-top: 1px solid #A6A6A6;
+    border-top: 1px solid #c8c8c8;
 }
 
 .work-exp-logo {
@@ -430,6 +436,10 @@ body {
     color: #fff;
 }
 
+.work-tag-patreon {
+    background: #4D4D4D;
+}
+
 .work-tag-red {
     background: #FFDFDF;
     color: #B83232;
@@ -482,7 +492,7 @@ body {
 
 .case-study-card {
     display: flex;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #c8c8c8;
     border-radius: 14px;
     overflow: hidden;
     min-height: 280px;
@@ -574,7 +584,7 @@ body {
 
 .page-footer-divider {
     border: none;
-    border-top: 1px solid var(--line-color);
+    border-top: 1px solid #c8c8c8;
     margin: 0 0 1.5rem 0;
 }
 
@@ -687,7 +697,7 @@ a.footnote-link {
 .footnote-item a {
     color: #000;
     text-decoration: none;
-    font-style: italic;
+    font-style: normal;
 }
 
 a.footnote-item-link {
@@ -696,17 +706,115 @@ a.footnote-item-link {
 }
 
 .footnote-item-name {
-    font-style: italic;
+    font-style: normal;
 }
 
 .footnote-num {
     color: var(--highlight);
-    font-style: italic;
+    font-style: normal;
 }
 
 .footnote-divider {
     color: var(--line-color);
     font-family: "Instrument Serif", serif;
+}
+
+/* Hover popup tooltips */
+.popup-anchor {
+    position: relative;
+    display: inline-block;
+}
+
+.popup-sup-anchor {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.popup-trigger {
+    cursor: pointer;
+}
+
+.popup-box {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: -10px;
+    transform: none;
+    background: var(--background);
+    border: 1px solid #c8c8c8;
+    border-radius: 8px;
+    padding: 0.4rem 0.85rem 0.5rem;
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-style: normal;
+    color: #000;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    pointer-events: auto;
+}
+
+/* Inline bridge: transparent hover area between popup and trigger */
+.popup-bridge {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -25px;
+    right: -25px;
+    height: 20px;
+    pointer-events: auto;
+}
+
+/* Arrow tail — border triangle (outline). Left set via JS as --popup-arrow-left */
+.popup-box::before {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: var(--popup-arrow-left, 0px);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 9px solid #c8c8c8;
+}
+
+/* Arrow tail — fill triangle (covers interior of border triangle) */
+.popup-box::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: calc(var(--popup-arrow-left, 0px) + 1px);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid var(--background);
+}
+
+.popup-anchor:hover .popup-box,
+.popup-anchor.pinned .popup-box {
+    display: block;
+}
+
+.popup-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.popup-link:hover {
+    opacity: 0.6;
+}
+
+.popup-underline {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.popup-arrow-icon {
+    display: inline-block;
+    font-size: inherit;
+    margin-left: -0.05em;
 }
 
 /* More Page */
@@ -721,9 +829,9 @@ a.footnote-item-link {
 }
 
 .intro-part-1 { animation-delay: 0.1s; }
-.intro-part-2 { animation-delay: 1.8s; }
-.intro-part-3 { animation-delay: 3.5s; }
-.intro-part-4 { animation-delay: 5.5s; }
+.intro-part-2 { animation-delay: 1.3s; }
+.intro-part-3 { animation-delay: 2.9s; }
+.intro-part-4 { animation-delay: 4.3s; }
 
 .more-intro-quote {
     margin-bottom: 2rem;
@@ -874,6 +982,10 @@ a.footnote-item-link {
     user-select: none;
 }
 
+.photo-caption-mobile {
+    display: none;
+}
+
 /* Music / On Repeat */
 .music-grid {
     display: grid;
@@ -1012,7 +1124,7 @@ a.footnote-item-link {
 }
 
 .quote-card footer {
-    color: #666;
+    color: #aaa;
     font-style: normal;
     font-size: 0.85rem;
 }
@@ -1062,10 +1174,16 @@ a.footnote-item-link {
     word-wrap: break-word;
 }
 
+.about-more-link {
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+}
+
 .about-last-updated {
     font-size: 1rem !important;
     font-family: "Inter", sans-serif !important;
-    color: #888;
+    color: #aaa;
     margin-top: 1.5rem !important;
 }
 
@@ -1134,7 +1252,7 @@ a.footnote-item-link {
     margin-top: 0.3rem;
     font-size: 1.2rem;
     font-style: normal;
-    color: #666;
+    color: #aaa;
 }
 
 .about-body {
@@ -1393,56 +1511,346 @@ a.footnote-item-link {
     .experience-sections {
         grid-template-columns: 1fr;
     }
-    
+
     :root {
         font-size: 11px;
     }
-    
+
     body {
         padding: 0.75rem 1.5rem 1rem 1.5rem;
     }
-    
+
     .curved-navbar {
         border-radius: 7px;
     }
-    
+
     .header-left h1 {
         font-size: 3rem;
     }
-    
+
     .header-left p {
         font-size: 1.3rem;
     }
-    
+
     .fact-label {
         font-size: 1.3rem;
         width: 7rem;
         min-width: 7rem;
     }
-    
+
     .fact-value {
         font-size: 0.9rem;
     }
-    
+
     .experience-section h2 {
         font-size: 1.3rem;
     }
-    
+
     .experience-logo {
         width: 3rem;
         height: 3rem;
         border-radius: 7px;
     }
-    
+
     .experience-company {
         font-size: 0.9rem;
     }
-    
+
     .experience-role {
         font-size: 0.75rem;
     }
-    
+
     .section-divider {
         margin: 1.5rem 0 1.75rem 0;
+    }
+}
+
+/* ── Phone (≤ 480px) ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 0.75rem clamp(1rem, 4vw, 1.5rem) 1.5rem;
+    }
+
+    /* Navbar */
+    .curved-navbar {
+        padding: 0.5rem 0.75rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .curved-navbar .nav-items {
+        gap: 0.6rem;
+    }
+
+    .curved-navbar .nav-item a {
+        font-size: 1.1rem;
+    }
+
+    .curved-navbar .logo {
+        font-size: 1.6rem;
+    }
+
+    .curved-navbar .nav-icon {
+        font-size: 1.2rem;
+        padding: 0.25rem;
+    }
+
+    .curved-navbar .nav-icon .ti {
+        font-size: 1.5rem;
+    }
+
+    .left {
+        margin-right: 0.25rem;
+    }
+
+    .right {
+        margin-left: 0.25rem;
+    }
+
+    /* Home page */
+    .header-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .header-left h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-left p {
+        font-size: 1.6rem;
+    }
+
+    .quick-facts {
+        gap: 0;
+    }
+
+    .fact-item {
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .fact-label {
+        display: inline;
+        font-size: 1.4rem;
+        width: auto;
+        min-width: unset;
+        white-space: normal;
+        margin-right: 0.3em;
+    }
+
+    .fact-value {
+        display: inline;
+        font-size: 1rem;
+    }
+
+    .footnotes-list {
+        gap: 0.75rem;
+    }
+
+    /* Work page — experience list */
+    .work-page-title {
+        font-size: 3rem;
+        margin-top: 0.5rem;
+    }
+
+    .work-exp-sep {
+        display: none;
+    }
+
+    .work-exp-company {
+        display: block;
+        font-style: italic;
+        margin-top: 0.15rem;
+    }
+
+    .work-exp-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    /* Work page — case studies */
+    .case-study-image {
+        display: none;
+    }
+
+    .case-study-card {
+        min-height: unset;
+    }
+
+    .case-study-left {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .case-study-role {
+        font-size: 2rem;
+    }
+
+    .case-study-company {
+        font-size: 1rem;
+    }
+
+    /* More page — songs */
+    .music-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* More page — quotes */
+    .about-quote {
+        font-size: 1.1rem;
+        padding-left: 1.2rem;
+    }
+
+    .quote-card footer,
+    .about-quote footer {
+        color: #666;
+        font-size: 0.85rem;
+    }
+
+    .more-intro-quote {
+        font-size: 1.1rem;
+    }
+
+    .more-intro-quote footer {
+        font-size: 1rem;
+    }
+
+    .quotes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .quote-card {
+        border: none;
+        border-left: 3px solid #000;
+        border-radius: 0;
+        padding: 0.25rem 0 0.25rem 0.85rem;
+    }
+
+    .quote-card:first-child {
+        border-left: 3px solid #000;
+        padding-left: 0.85rem;
+    }
+
+    /* About page */
+    .about-header-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .about-header-left h1 {
+        font-size: 4.5rem;
+        margin-bottom: -0.25rem;
+    }
+
+    .about-header-left p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-last-updated {
+        margin-top: 0.2rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .about-header-right {
+        width: 100%;
+        margin: 0;
+        border-radius: 14px;
+    }
+
+    .about-header-right-inner {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 14px;
+    }
+
+    .about-profile-image {
+        width: 100%;
+    }
+
+    .about-section-title {
+        font-size: 1.75rem;
+    }
+
+    .about-body {
+        font-size: 1rem;
+    }
+
+    /* About page — photo gallery mobile carousel */
+    .photo-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 1rem;
+    }
+
+    .photo-locations {
+        display: none;
+    }
+
+    .photo-caption-mobile {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 0.9rem;
+        color: #555;
+        margin: 0.6rem 0 0;
+        padding: 0;
+    }
+
+    .photo-strip-wrapper {
+        overflow: hidden;
+        position: relative;
+        height: auto;
+        width: 100vw;
+        margin-left: calc(-1 * clamp(1rem, 4vw, 1.5rem));
+        cursor: pointer;
+    }
+
+    .photo-strip-center {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+
+    .photo-strip {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+        will-change: transform;
+    }
+
+    .photo-item {
+        height: 54vw;
+        width: auto;
+        max-width: 82vw;
+        flex-shrink: 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .photo-item img {
+        height: 100%;
+        width: auto;
+        max-width: 82vw;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Page footer */
+    .page-footer-cta {
+        font-size: 1.5rem;
     }
 }

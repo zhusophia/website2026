@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZ</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
 <body>
      <nav class="curved-navbar">
@@ -27,11 +30,11 @@
             </li>
         </ul>
         
-        <div class="logo">SZ</div>
+        <a href="./" class="logo">SZ</a>
         
         <ul class="nav-items right">
             <li class="nav-item">
-                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="fa-regular fa-file-pdf"></i></a>
+                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="ti ti-file-cv"></i></a>
             </li>
             <li class="nav-item">
                 <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="nav-icon"><i class="fa-regular fa-envelope"></i></a>
@@ -50,12 +53,12 @@
         <section class="header-section">
             <div class="header-left">
                 <h1>Hi, I'm Sophia!</h1>
-                <p>I like solving <a href="about.html" class="highlight">interesting</a><a href="about.html" class="footnote-link"><sup class="footnote-ref">1</sup></a> problems.</p>
+                <p>I like solving <span class="popup-anchor"><span class="popup-trigger highlight">interesting</span><span class="popup-sup-anchor"><sup class="footnote-ref popup-trigger">1</sup><span class="popup-box"><span class="popup-bridge"></span><a href="about.html" class="popup-link">See <span class="popup-underline">About</span> <i class="bi bi-arrow-up-right popup-arrow-icon"></i></a></span></span></span> problems.</p>
             </div>
             <div class="quick-facts">
                 <div class="fact-item">
-                    <span class="fact-label"><a href="work.html" class="fact-label-link">Currently</a><a href="work.html" class="footnote-link"><sup class="footnote-ref">2</sup></a></span>
-                    <span class="fact-value">building products as product manager.</span>
+                    <span class="fact-label"><span class="popup-anchor"><span class="popup-trigger">Currently</span><span class="popup-sup-anchor"><sup class="footnote-ref popup-trigger">2</sup><span class="popup-box"><span class="popup-bridge"></span><a href="work.html" class="popup-link">See <span class="popup-underline">Work</span> <i class="bi bi-arrow-up-right popup-arrow-icon"></i></a></span></span></span></span>
+                    <span class="fact-value">solving problems as product manager.</span>
                 </div>
                 <div class="fact-item">
                     <span class="fact-label">Studying</span>
@@ -66,7 +69,7 @@
                     <span class="fact-value" id="time-display">San Francisco, <span id="current-time"></span></span>
                 </div>
                 <div class="fact-item">
-                    <span class="fact-label">Obsessed with<sup class="footnote-ref footnote-ref-no-ul">3</sup></span>
+                    <span class="fact-label"><span class="popup-anchor"><span class="popup-trigger">Obsessed with</span><span class="popup-sup-anchor"><sup class="footnote-ref footnote-ref-no-ul popup-trigger">3</sup><span class="popup-box"><span class="popup-bridge"></span>Find my 'More' page &nbsp;( • ᴗ - ) ✧</span></span></span></span>
                     <span class="fact-value">the NYT Mini Crossword Puzzle &amp; landscape photography.</span>
                 </div>
             </div>
@@ -79,7 +82,7 @@
                 <span class="footnote-divider">/</span>
                 <a href="work.html" class="footnote-item-link"><span class="footnote-item"><span class="footnote-num">2.</span> See <span class="footnote-item-name">Work</span>.</span></a>
                 <span class="footnote-divider">/</span>
-                <span class="footnote-item"><span class="footnote-num">3.</span> Find <a href="more.html">More</a>.</span>
+                <span class="footnote-item"><span class="footnote-num">3.</span> Find More.</span>
             </div>
         </footer>
     </div>
@@ -103,6 +106,55 @@
 
         // Update once when page loads
         updateTime();
+
+        // Align each popup's arrow tip with its superscript number
+        function positionPopupArrows() {
+            document.querySelectorAll('.popup-sup-anchor').forEach(function(supAnchor) {
+                var box = supAnchor.querySelector('.popup-box');
+                var sup = supAnchor.querySelector('sup');
+                if (!box || !sup) return;
+
+                // Show invisibly to measure layout
+                box.style.display = 'block';
+                box.style.visibility = 'hidden';
+                box.style.marginLeft = '';
+
+                var supRect = sup.getBoundingClientRect();
+                var boxRect = box.getBoundingClientRect();
+
+                // Prevent popup from overflowing the right edge of the viewport
+                var rightOverflow = boxRect.right - (document.documentElement.clientWidth - 10);
+                if (rightOverflow > 0) {
+                    box.style.marginLeft = (-rightOverflow) + 'px';
+                    boxRect = box.getBoundingClientRect();
+                }
+
+                box.style.display = '';
+                box.style.visibility = '';
+
+                var arrowLeft = (supRect.left + supRect.width / 2) - boxRect.left - 8;
+                arrowLeft = Math.max(0, Math.min(boxRect.width - 16, arrowLeft));
+                box.style.setProperty('--popup-arrow-left', arrowLeft + 'px');
+            });
+        }
+
+        window.addEventListener('load', positionPopupArrows);
+        window.addEventListener('resize', positionPopupArrows);
+
+        // Popup pin-on-click behavior
+        document.querySelectorAll('.popup-anchor').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                if (e.target.closest('.popup-link')) return;
+                e.stopPropagation();
+                var wasPin = anchor.classList.contains('pinned');
+                document.querySelectorAll('.popup-anchor.pinned').forEach(function(a) { a.classList.remove('pinned'); });
+                if (!wasPin) anchor.classList.add('pinned');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.popup-anchor.pinned').forEach(function(a) { a.classList.remove('pinned'); });
+        });
     </script>
 
 </body>

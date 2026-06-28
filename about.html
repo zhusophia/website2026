@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZ — About</title>
+    <title>About</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
 <body>
     <nav class="curved-navbar">
@@ -27,11 +29,11 @@
             </li>
         </ul>
 
-        <div class="logo">SZ</div>
+        <a href="./" class="logo">SZ</a>
 
         <ul class="nav-items right">
             <li class="nav-item">
-                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="fa-regular fa-file-pdf"></i></a>
+                <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="nav-icon"><i class="ti ti-file-cv"></i></a>
             </li>
             <li class="nav-item">
                 <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="nav-icon"><i class="fa-regular fa-envelope"></i></a>
@@ -50,7 +52,7 @@
         <section class="about-header-section">
             <div class="about-header-left">
                 <h1>Still curious?</h1>
-                <p>Here's a <a href="more.html" class="highlight">little more</a> about me.</p>
+                <p>Here's a little <a href="more.html" class="about-more-link">more</a> about me.</p>
                 <p class="about-last-updated">Last updated: July 2026</p>
             </div>
             <div class="about-header-right">
@@ -61,6 +63,11 @@
         </section>
 
         <hr class="about-divider">
+
+        <section class="about-section">
+            <p class="about-body">Hi! Welcome to my website. Excited that you're here!</p>
+            <p class="about-body">This page is a collection of my thoughts towards various subjects. Enjoy :)</p>
+        </section>
 
         <section class="about-section">
             <h2 class="about-section-title">Problems:</h2>
@@ -90,15 +97,15 @@
                 <div class="photo-locations">
                     <div class="photo-location active" data-index="0">E7, Waterloo (2025)</div>
                     <div class="photo-location" data-index="1">Chinatown, San Francisco (2026)</div>
-                    <div class="photo-location" data-index="2">Asakusa, Tokyo (2025)</div>
-                    <div class="photo-location" data-index="3">Figueroa St, Los Angeles (2026)</div>
-                    <div class="photo-location" data-index="4">Victoria Peak, Hong Kong (2025)</div>
+                    <div class="photo-location" data-index="2">Figueroa St, Los Angeles (2026)</div>
+                    <div class="photo-location" data-index="3">Asakusa, Tokyo (2025)</div>
+                    <div class="photo-location" data-index="4">Ragged Point, Big Sur (2026)</div>
                     <div class="photo-location" data-index="5">Chimney Rock, Point Reyes (2026)</div>
-                    <div class="photo-location" data-index="6">Muir Beach, Muir Woods (2026)</div>
-                    <div class="photo-location" data-index="7">Twin Peaks, San Francisco (2026)</div>
-                    <div class="photo-location" data-index="8">Hai Di Lao, Guangzhou (2025)</div>
-                    <div class="photo-location" data-index="9">St. Jacobs, Waterloo (2025)</div>
-                    <div class="photo-location" data-index="10">UofT, Toronto (2024)</div>
+                    <div class="photo-location" data-index="6">Twin Peaks, San Francisco (2026)</div>
+                    <div class="photo-location" data-index="7">Hai Di Lao, Guangzhou (2025)</div>
+                    <div class="photo-location" data-index="8">Victoria Peak, Hong Kong (2025)</div>
+                    <div class="photo-location" data-index="9">UofT, Toronto (2024)</div>
+                    <div class="photo-location" data-index="10">St. Jacobs, Waterloo (2025)</div>
                     <div class="photo-location" data-index="11">Yonge &amp; Dundas, Toronto (2023)</div>
                     <div class="photo-location" data-index="12">Chinatown, San Francisco (2026)</div>
                 </div>
@@ -107,6 +114,7 @@
                         <div class="photo-strip" id="photo-strip"></div>
                     </div>
                 </div>
+                <p class="photo-caption-mobile" id="photo-caption-mobile"></p>
             </div>
         </section>
 
@@ -148,11 +156,11 @@
         </section>
 
         <footer class="page-footer">
-            <p class="page-footer-cta">I'd love to chat. <span class="highlight">Reach out!</span></p>
+            <p class="page-footer-cta">I'd love to chat. <a href="mailto:sophiazhu.gz@gmail.com" class="highlight">Reach out!</a></p>
             <hr class="page-footer-divider">
             <div class="page-footer-links">
                 <a href="https://drive.google.com/file/d/1_LULUceaO31gfFCPKLI1jAV9chrjBtFf/view?usp=sharing" target="_blank" class="page-footer-link">
-                    <i class="fa-regular fa-file-pdf"></i>
+                    <i class="ti ti-file-cv"></i>
                     <span>Resume</span>
                 </a>
                 <a href="mailto:sophiazhu.gz@gmail.com" target="_blank" class="page-footer-link">
@@ -173,15 +181,15 @@
             const photoData = [
                 { src: 'pictures/e7.jpg' },
                 { src: 'pictures/chinatown1.JPG' },
-                { src: 'pictures/Asakusa_Fish.jpg' },
                 { src: 'pictures/Fig St.jpg' },
-                { src: 'pictures/victoriapeak.jpg' },
+                { src: 'pictures/Asakusa_Fish.jpg' },
+                { src: 'pictures/RaggedPoint.jpeg' },
                 { src: 'pictures/chimney_rock.JPG' },
-                { src: 'pictures/PointReyes.jpg' },
                 { src: 'pictures/twinpeaks.JPG' },
                 { src: 'pictures/guangzhou.jpg' },
-                { src: 'pictures/waterloo.jpg' },
+                { src: 'pictures/victoriapeak.jpg' },
                 { src: 'pictures/UofT.jpg' },
+                { src: 'pictures/waterloo.jpg' },
                 { src: 'pictures/yonge.jpg' },
                 { src: 'pictures/chinatown2.jpg' },
             ];
@@ -190,9 +198,108 @@
             const strip = document.getElementById('photo-strip');
             const wrapper = document.querySelector('.photo-strip-wrapper');
             const locations = Array.from(document.querySelectorAll('.photo-location'));
-            const locationsContainer = document.querySelector('.photo-locations');
+            const captionMobile = document.getElementById('photo-caption-mobile');
 
-            function buildStrip() {
+            const isMobile = () => window.matchMedia('(max-width: 480px)').matches;
+
+            // ── Mobile: infinite scroll-snap carousel ────────────────────
+            function buildMobileStrip() {
+                strip.innerHTML = '';
+                for (let copy = 0; copy < 3; copy++) {
+                    photoData.forEach((photo) => {
+                        const item = document.createElement('div');
+                        item.className = 'photo-item';
+                        const img = document.createElement('img');
+                        img.src = photo.src;
+                        img.alt = '';
+                        img.draggable = false;
+                        item.appendChild(img);
+                        strip.appendChild(item);
+                    });
+                }
+            }
+
+            function setMobileActive(idx) {
+                locations.forEach((l, i) => l.classList.toggle('active', i === idx));
+                if (captionMobile && locations[idx]) {
+                    captionMobile.textContent = locations[idx].textContent;
+                }
+            }
+
+            function initMobile() {
+                buildMobileStrip();
+
+                const items = Array.from(strip.querySelectorAll('.photo-item'));
+                let currentIdx = N; // always stays within copy 1 (indices N..2N-1)
+                let isAnimating = false;
+                let animTimer = null;
+
+                // Move strip so items[idx] is centered in the wrapper
+                function goTo(idx, animate) {
+                    currentIdx = idx;
+                    const item = items[idx];
+                    const offset = wrapper.offsetWidth / 2 - (item.offsetLeft + item.offsetWidth / 2);
+                    strip.style.transition = animate ? 'transform 0.3s ease' : 'none';
+                    strip.style.transform = `translateX(${offset}px)`;
+                    setMobileActive(idx % N);
+                }
+
+                // Navigate ±1, then silently loop back into copy 1
+                function navigate(dir) {
+                    if (isAnimating) return;
+                    isAnimating = true;
+                    goTo(currentIdx + dir, true);
+                    clearTimeout(animTimer);
+                    animTimer = setTimeout(() => {
+                        if (currentIdx < N) goTo(currentIdx + N, false);
+                        else if (currentIdx >= 2 * N) goTo(currentIdx - N, false);
+                        isAnimating = false;
+                    }, 320);
+                }
+
+                // Hide until copy-0 images have their dimensions (needed for offsetLeft)
+                wrapper.style.opacity = '0';
+                const firstImgs = Array.from(strip.querySelectorAll('img')).slice(0, N);
+                Promise.all(firstImgs.map(img => new Promise(resolve => {
+                    if (img.complete) resolve();
+                    else {
+                        img.addEventListener('load', resolve, { once: true });
+                        img.addEventListener('error', resolve, { once: true });
+                    }
+                }))).then(() => requestAnimationFrame(() => {
+                    goTo(N, false);
+                    requestAnimationFrame(() => {
+                        wrapper.style.transition = 'opacity 0.2s';
+                        wrapper.style.opacity = '1';
+                    });
+                }));
+
+                // Click left half → prev, right half → next
+                let suppressClick = false;
+                wrapper.addEventListener('click', (e) => {
+                    if (suppressClick) return;
+                    const x = e.clientX - wrapper.getBoundingClientRect().left;
+                    navigate(x < wrapper.offsetWidth / 2 ? -1 : 1);
+                });
+
+                // Swipe: any swipe > 30px navigates prev/next
+                let touchStartX = 0;
+                wrapper.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                wrapper.addEventListener('touchend', (e) => {
+                    const dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 30) {
+                        suppressClick = true;
+                        setTimeout(() => { suppressClick = false; }, 300);
+                        navigate(dx < 0 ? 1 : -1);
+                    }
+                }, { passive: true });
+            }
+
+            // ── Desktop: infinite scroll strip ───────────────────────────
+            function buildDesktopStrip() {
                 strip.innerHTML = '';
                 for (let copy = 0; copy < 3; copy++) {
                     photoData.forEach((photo) => {
@@ -213,92 +320,95 @@
                 }
             }
 
-            buildStrip();
+            function initDesktop() {
+                buildDesktopStrip();
+                const items = Array.from(strip.querySelectorAll('.photo-item'));
+                let setWidth = 0;
 
-            let setWidth = 0;
-            let items = [];
+                let scrollingTo = false, scrollingToTimer = null;
 
-            function init() {
-                items = Array.from(strip.querySelectorAll('.photo-item'));
-                setWidth = items[N].offsetLeft;
-                wrapper.scrollLeft = setWidth;
-            }
-
-            if (document.readyState === 'complete') init();
-            else window.addEventListener('load', init);
-
-            let scrollingTo = false;
-            let scrollingToTimer = null;
-
-            function setActive(index) {
-                locations.forEach((loc, i) => loc.classList.toggle('active', i === index));
-            }
-
-            wrapper.addEventListener('scroll', () => {
-                if (!setWidth) return;
-                if (wrapper.scrollLeft < setWidth * 0.5) {
-                    wrapper.scrollLeft += setWidth;
-                } else if (wrapper.scrollLeft > setWidth * 2.5) {
-                    wrapper.scrollLeft -= setWidth;
+                function setActive(index) {
+                    locations.forEach((loc, i) => loc.classList.toggle('active', i === index));
                 }
 
-                if (scrollingTo) return;
-
-                const sl = wrapper.scrollLeft;
-                let activeIndex = 0;
-                for (let j = 0; j < items.length - 1; j++) {
-                    if (items[j].offsetLeft <= sl && items[j + 1].offsetLeft > sl) {
-                        activeIndex = j % N;
-                        break;
+                wrapper.addEventListener('scroll', () => {
+                    if (!setWidth) return;
+                    if (wrapper.scrollLeft < setWidth * 0.5) {
+                        wrapper.scrollLeft += setWidth;
+                    } else if (wrapper.scrollLeft > setWidth * 2.5) {
+                        wrapper.scrollLeft -= setWidth;
                     }
-                }
-                setActive(activeIndex);
-            }, { passive: true });
-
-            wrapper.addEventListener('scrollend', () => { scrollingTo = false; }, { passive: true });
-
-            let isDragging = false, startX = 0, startScrollLeft = 0;
-
-            wrapper.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.clientX;
-                startScrollLeft = wrapper.scrollLeft;
-                wrapper.style.cursor = 'grabbing';
-            });
-
-            document.addEventListener('mouseup', () => {
-                if (isDragging) { isDragging = false; wrapper.style.cursor = 'grab'; }
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                wrapper.scrollLeft = startScrollLeft - (e.clientX - startX);
-            });
-
-            let touchStartX = 0, touchScrollLeft = 0;
-            wrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.touches[0].clientX;
-                touchScrollLeft = wrapper.scrollLeft;
-            }, { passive: true });
-            wrapper.addEventListener('touchmove', (e) => {
-                wrapper.scrollLeft = touchScrollLeft - (e.touches[0].clientX - touchStartX);
-            }, { passive: true });
-
-            locations.forEach((loc) => {
-                loc.addEventListener('click', () => {
-                    if (!setWidth) {
-                        items = Array.from(strip.querySelectorAll('.photo-item'));
-                        setWidth = items[N].offsetLeft;
-                        wrapper.scrollLeft = setWidth;
+                    if (scrollingTo) return;
+                    const sl = wrapper.scrollLeft;
+                    let activeIndex = 0;
+                    for (let j = 0; j < items.length - 1; j++) {
+                        if (items[j].offsetLeft <= sl && items[j + 1].offsetLeft > sl) {
+                            activeIndex = j % N;
+                            break;
+                        }
                     }
-                    scrollingTo = true;
-                    clearTimeout(scrollingToTimer);
-                    scrollingToTimer = setTimeout(() => { scrollingTo = false; }, 1500);
-                    const index = parseInt(loc.dataset.index);
-                    setActive(index);
-                    wrapper.scrollTo({ left: items[N + index].offsetLeft, behavior: 'smooth' });
+                    setActive(activeIndex);
+                }, { passive: true });
+
+                wrapper.addEventListener('scrollend', () => { scrollingTo = false; }, { passive: true });
+
+                let isDragging = false, startX = 0, startScrollLeft = 0;
+                wrapper.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.clientX;
+                    startScrollLeft = wrapper.scrollLeft;
+                    wrapper.style.cursor = 'grabbing';
                 });
-            });
+                document.addEventListener('mouseup', () => {
+                    if (isDragging) { isDragging = false; wrapper.style.cursor = 'grab'; }
+                });
+                document.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    wrapper.scrollLeft = startScrollLeft - (e.clientX - startX);
+                });
+
+                let touchStartX = 0, touchScrollLeft = 0;
+                wrapper.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                    touchScrollLeft = wrapper.scrollLeft;
+                }, { passive: true });
+                wrapper.addEventListener('touchmove', (e) => {
+                    wrapper.scrollLeft = touchScrollLeft - (e.touches[0].clientX - touchStartX);
+                }, { passive: true });
+
+                locations.forEach((loc) => {
+                    loc.addEventListener('click', () => {
+                        if (!setWidth) return;
+                        scrollingTo = true;
+                        clearTimeout(scrollingToTimer);
+                        scrollingToTimer = setTimeout(() => { scrollingTo = false; }, 1500);
+                        const index = parseInt(loc.dataset.index);
+                        setActive(index);
+                        wrapper.scrollTo({ left: items[N + index].offsetLeft, behavior: 'smooth' });
+                    });
+                });
+
+                // Wait for first N images to have dimensions before measuring offsetLeft
+                const firstImgs = Array.from(strip.querySelectorAll('img')).slice(0, N);
+                Promise.all(firstImgs.map(img => new Promise(resolve => {
+                    if (img.complete) resolve();
+                    else {
+                        img.addEventListener('load', resolve, { once: true });
+                        img.addEventListener('error', resolve, { once: true });
+                    }
+                }))).then(() => requestAnimationFrame(() => {
+                    setWidth = items[N].offsetLeft;
+                    wrapper.scrollLeft = setWidth;
+                }));
+            }
+
+            // ── Init ──────────────────────────────────────────────────────
+            if (isMobile()) {
+                initMobile();
+            } else {
+                if (document.readyState === 'complete') initDesktop();
+                else window.addEventListener('load', initDesktop);
+            }
         })();
     </script>
 </body>
